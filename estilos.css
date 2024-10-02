@@ -1,0 +1,133 @@
+/* estilos.css */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+/* Estilos do perfil */
+.perfil {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.perfil h2 {
+    margin-top: 10px;
+}
+
+.perfil p {
+    margin: 5px 0;
+}
+
+/* Formulário de upload */
+.perfil form {
+    margin-top: 15px;
+}
+
+/* Estilos das seções de consultas */
+.consultas-pendentes, .historico-consultas {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.consultas-pendentes h3, .historico-consultas h3 {
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+}
+
+.consultas-pendentes h3::after, .historico-consultas h3::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+}
+
+.consultas-pendentes ul, .historico-consultas ul {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Inicia oculto */
+}
+
+.consultas-pendentes li, .historico-consultas li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.consultas-pendentes li:last-child, .historico-consultas li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos do formulário de login */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-container input[type="submit"] {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.foto-label {
+    position: relative;
+    display: inline-block;
+}
+
+.foto-label .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.foto-label:hover .overlay {
+    opacity: 1;
+}
+
+.foto-label .overlay i {
+    font-size: 24px;
+}
